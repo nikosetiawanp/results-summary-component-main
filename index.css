@@ -1,0 +1,88 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Hanken Grotesk";
+}
+
+section.grid-container {
+  display: grid;
+  grid-template-row: 1fr 1fr;
+}
+/* RESULT */
+.result {
+  grid-row: 1;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 2rem 3rem;
+}
+.result span {
+  color: hsla(241, 100%, 89%, 70%);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.result p {
+  text-align: center;
+  color: hsla(241, 100%, 89%, 50%);
+}
+/* CIRCLE */
+.circle {
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  border-radius: 100%;
+  min-width: 140px;
+  min-height: 140px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.circle strong {
+  font-size: 4rem;
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+}
+.circle p {
+  color: hsla(241, 100%, 89%, 75%);
+  font-weight: 500;
+}
+.result b {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+/* SUMMARY */
+.summary {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+button {
+  color: hsl(0, 0%, 100%);
+  background: hsl(224, 30%, 27%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+
+  height: 55px;
+  width: 100%;
+  border-radius: 50px;
+}
