@@ -6,10 +6,12 @@
 }
 
 body {
+  font-family: "Hanken Grotesk";
+}
+.outer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Hanken Grotesk";
 }
 
 section.grid-container {
@@ -71,18 +73,106 @@ section.grid-container {
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   padding: 2rem;
+  gap: 1rem;
+}
+/* SUMMARY TITLE */
+.summary span {
+  font-weight: 700;
+  color: hsl(224, 30%, 27%);
 }
 
+.summary > div {
+  width: 100%;
+  min-height: 55px;
+  padding: 1rem;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary > div > span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+}
+.summary > div > p {
+  color: hsla(224, 30%, 27%, 40%);
+  font-weight: 700;
+}
+.summary > div > p b {
+  color: hsla(224, 30%, 27%, 100%);
+}
+/* REACTION */
+.reaction-container {
+  background: hsla(0, 100%, 67%, 10%);
+}
+.reaction-container span {
+  color: hsl(0, 100%, 67%);
+}
+
+/* MEMORY */
+.memory-container {
+  background: hsla(39, 100%, 56%, 10%);
+}
+.memory-container span {
+  color: hsl(39, 100%, 56%);
+}
+/* VERBAL */
+.verbal-container {
+  background: hsla(166, 100%, 37%, 10%);
+}
+.verbal-container span {
+  color: hsl(166, 100%, 37%);
+}
+/* VISUAL */
+.visual-container {
+  background: hsla(234, 85%, 45%, 10%);
+}
+.visual-container span {
+  color: hsl(234, 85%, 45%);
+}
+/* BUTTON */
 button {
   color: hsl(0, 0%, 100%);
   background: hsl(224, 30%, 27%);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   border: none;
 
   height: 55px;
   width: 100%;
   border-radius: 50px;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  section.grid-container {
+    grid-template-columns: 1fr 1fr;
+    width: 735px;
+    height: 515px;
+
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px hsl(221, 100%, 96%);
+    margin: auto;
+  }
+  .result {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    border-radius: 30px;
+  }
+  .summary {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
+  button {
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
 }
