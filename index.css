@@ -7,6 +7,10 @@
 
 body {
   font-family: "Hanken Grotesk";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .outer-container {
   display: flex;
